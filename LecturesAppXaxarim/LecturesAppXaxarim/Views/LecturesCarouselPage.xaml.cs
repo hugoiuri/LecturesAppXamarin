@@ -22,15 +22,6 @@ namespace LecturesAppXaxarim.Views
             InitializeComponent();
             viewModel = ServiceLocator.Current.GetInstance<LecturesCarouselPageViewModel>();
             BindingContext = viewModel;
-            //ItemsSource = viewModel.Lectures;
-        }
-
-        protected override async void OnAppearing()
-        {
-            base.OnAppearing();
-
-            await viewModel.GetAll();
-
             ItemsSource = viewModel.Lectures;
         }
     }

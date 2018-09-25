@@ -3,6 +3,7 @@ using LecturesAppXamarin.Domain.Interfaces;
 using LecturesAppXamarin.Infra.Data.Repository;
 using LecturesAppXaxarim.Services;
 using LecturesAppXaxarim.Services.Interfaces;
+using LecturesAppXaxarim.Views;
 using System;
 using Unity;
 using Unity.ServiceLocation;
@@ -25,7 +26,7 @@ namespace LecturesAppXaxarim
 
             ServiceLocator.SetLocatorProvider(() => new UnityServiceLocator(unityContainer));
 
-            MainPage = new Views.MainPage();
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()

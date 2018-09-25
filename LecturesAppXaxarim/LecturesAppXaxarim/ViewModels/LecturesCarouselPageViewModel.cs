@@ -26,6 +26,18 @@ namespace LecturesAppXaxarim.ViewModels
 
         public async Task GetAll()
         {
+            var lectures = await LectureService.GetAll();
+
+            if (Lectures.Count > 0)
+            {
+                Lectures.Clear();
+            }
+
+            foreach (var lecture in lectures)
+            {
+                Lectures.Add(lecture);
+            }
+
             Lectures.Add(new Lecture
             {
                 LectureName = "Modern Agile e o Futuro do Desenvolvimento de Software",
@@ -47,18 +59,6 @@ namespace LecturesAppXaxarim.ViewModels
                 Description = "Nesta sessão compartilharei com a audiência ferramentas aplicadas em equipes que atuam em contextos ágeis e que foram úteis para a criação de ambientes eficientes (fazer a coisa da forma certa), eficazes (fazer o que é importante para o negócio) e econômicos (fazer de uma maneira barata).",
                 ImageSource = "https://www.agileminas.com.br/2018/images/palestrantes/view-Raphael.jpg"
             });
-
-            var lectures = await LectureService.GetAll();
-
-            if (Lectures.Count > 0)
-            {
-                Lectures.Clear();
-            }
-
-            foreach (var lecture in lectures)
-            {
-                Lectures.Add(lecture);
-            }
         }
     }
 }

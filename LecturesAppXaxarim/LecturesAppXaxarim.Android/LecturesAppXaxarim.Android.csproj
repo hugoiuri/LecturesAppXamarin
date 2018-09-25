@@ -63,6 +63,7 @@
     <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="27.0.2.1" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\DatabaseFile.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -98,6 +99,10 @@
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\LecturesAppXamarin.Domain\LecturesAppXamarin.Domain.csproj">
+      <Project>{8DA4493D-33B2-4C6F-AA64-7BFED324BC78}</Project>
+      <Name>LecturesAppXamarin.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LecturesAppXaxarim\LecturesAppXaxarim.csproj">
       <Project>{BEBAC748-BDD1-43D0-845C-40CC043FC755}</Project>
       <Name>LecturesAppXaxarim</Name>
