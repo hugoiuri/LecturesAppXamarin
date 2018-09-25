@@ -10,5 +10,6 @@ namespace LecturesAppXaxarim.Services.Interfaces
     {
         void Insert(Lecture lecture);
         Task<IEnumerable<Lecture>> GetAll();
+        void UpdateData();
     }
 }
