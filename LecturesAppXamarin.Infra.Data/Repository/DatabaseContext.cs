@@ -1,7 +1,10 @@
-﻿using SQLite;
+﻿using LecturesAppXamarin.Domain.Interfaces;
+using LecturesAppXamarin.Domain.Lectures;
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Xamarin.Forms;
 
 namespace LecturesAppXamarin.Infra.Data.Repository
 {
@@ -23,8 +26,8 @@ namespace LecturesAppXamarin.Infra.Data.Repository
 
         public DatabaseContext()
         {
-            var caminhoBancoDeDados = DependencyService.Get<IDatabaseFile>().GetFilePath("calcfreelancer.db3");
-            Conn = new SQLiteAsyncConnection(caminhoBancoDeDados);
+            var dbPath = DependencyService.Get<IDatabaseFile>().GetFilePath("lectures.db3");
+            Conn = new SQLiteAsyncConnection(dbPath);
 
             Conn.CreateTableAsync<Lecture>().Wait();
         }

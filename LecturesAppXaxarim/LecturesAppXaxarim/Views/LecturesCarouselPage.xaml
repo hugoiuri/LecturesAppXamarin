@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="LecturesAppXaxarim.Views.CarouselMainPage"
-              Title="Palestras">
+             x:Class="LecturesAppXaxarim.Views.LecturesCarouselPage"
+              Title="Palestras"
+              ItemsSource="{Binding Lectures, Mode=TwoWay}">
     <CarouselPage.ItemTemplate>
         <DataTemplate>
             <ContentPage>
@@ -12,7 +13,7 @@
                     </OnPlatform>
                 </ContentPage.Padding>
                 <StackLayout>
-                    <Label Text="{Binding Lecture}" FontSize="Large" XAlign="Center" />
+                    <Label Text="{Binding LectureName}" FontSize="Large" XAlign="Center" />
                     <Image Source="{Binding ImageSource}" WidthRequest="250" HeightRequest="250" />
                     <Label Text="{Binding Name}" FontSize="Medium" HorizontalOptions="Center" />
                     <Label Text="{Binding Description}" FontSize="Small" XAlign="Center"/>

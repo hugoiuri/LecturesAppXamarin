@@ -1,4 +1,11 @@
-﻿using System;
+﻿using CommonServiceLocator;
+using LecturesAppXamarin.Domain.Interfaces;
+using LecturesAppXamarin.Infra.Data.Repository;
+using LecturesAppXaxarim.Services;
+using LecturesAppXaxarim.Services.Interfaces;
+using System;
+using Unity;
+using Unity.ServiceLocation;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,6 +17,13 @@ namespace LecturesAppXaxarim
         public App()
         {
             InitializeComponent();
+
+            var unityContainer = new UnityContainer();
+
+            unityContainer.RegisterType<ILectureService, LectureService>();
+            unityContainer.RegisterType<ILectureRepository, LectureRepository>();
+
+            ServiceLocator.SetLocatorProvider(() => new UnityServiceLocator(unityContainer));
 
             MainPage = new Views.MainPage();
         }

@@ -11,23 +11,33 @@
 
   <ItemGroup>
     <PackageReference Include="sqlite-net-pcl" Version="1.5.231" />
+    <PackageReference Include="Unity" Version="5.8.11" />
     <PackageReference Include="Xamarin.Forms" Version="3.2.0.839982" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Views\CarouselMainPage.xaml">
+    <ProjectReference Include="..\..\LecturesAppXamarin.Domain\LecturesAppXamarin.Domain.csproj" />
+    <ProjectReference Include="..\..\LecturesAppXamarin.Infra.Data\LecturesAppXamarin.Infra.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\LecturesCarouselPage.xaml.cs">
+      <DependentUpon>LecturesCarouselPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\EventPage.xaml.cs">
+      <DependentUpon>EventPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\LecturesCarouselPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\HomePage.xaml">
+    <EmbeddedResource Update="Views\EventPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\MainPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Services\" />
-    <Folder Include="ViewModels\" />
   </ItemGroup>
 </Project>

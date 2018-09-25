@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace LecturesAppXaxarim.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class HomePage : ContentPage
+	public partial class EventPage : ContentPage
 	{
-		public HomePage ()
+		public EventPage ()
 		{
 			InitializeComponent ();
 		}

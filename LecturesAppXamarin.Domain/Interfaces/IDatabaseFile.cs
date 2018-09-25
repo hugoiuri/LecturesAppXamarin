@@ -1,11 +1,11 @@
-﻿using LecturesAppXamarin.Domain.Lectures;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace LecturesAppXamarin.Domain.Interfaces
 {
-    public interface ILectures : IRepository<Lecture>
+    public interface IDatabaseFile
     {
+        string GetFilePath(string file);
     }
 }

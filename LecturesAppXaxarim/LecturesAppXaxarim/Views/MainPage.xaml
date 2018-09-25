@@ -5,7 +5,7 @@
             x:Class="LecturesAppXaxarim.Views.MainPage"
             Title="Lectures App">
   <!--Pages can be added as references or inline-->
-  <local:HomePage />
-  <local:CarouselMainPage />
+  <local:EventPage />
+  <local:LecturesCarouselPage />
 </TabbedPage>
     
