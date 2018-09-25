@@ -17,3 +17,8 @@ Todos os dados e imagens utilizados neste trabalho foram retirados do site https
 ## Demonstração
 
 <img src="https://github.com/hugoiuri/LecturesAppXamarin/blob/master/SupportFiles/LecturesApp.gif" alt="App funcionando" width="260">
+
+## Contribuidores
+
+<a href="https://github.com/hugoiuri">Hugo Iuri Cordeiro</a>
+<a href="https://github.com/kpazfagundes">Karine Paz Fagundes Cordeiro</a>
