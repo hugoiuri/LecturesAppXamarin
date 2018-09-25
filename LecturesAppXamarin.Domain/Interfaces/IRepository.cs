@@ -13,5 +13,6 @@ namespace LecturesAppXamarin.Domain.Interfaces
         Task Insert(TEntity tEntity);
         Task Update(TEntity tEntity);
         Task Delete(TEntity tEntity);
+        Task Clear();
     }
 }

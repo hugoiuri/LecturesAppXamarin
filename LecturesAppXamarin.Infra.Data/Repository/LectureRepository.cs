@@ -9,9 +9,5 @@ namespace LecturesAppXamarin.Infra.Data.Repository
 {
     public class LectureRepository : SqLiteRepository<Lecture>, ILectureRepository
     {
-        public async Task Clear()
-        {
-            await DatabaseContext.Database.DeleteAllAsync<Lecture>();
-        }
     }
 }

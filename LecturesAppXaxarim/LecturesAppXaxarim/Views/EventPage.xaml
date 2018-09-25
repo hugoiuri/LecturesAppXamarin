@@ -10,8 +10,8 @@
             </OnPlatform>
         </ContentPage.Padding>
     <StackLayout>
-        <Label Text="Agile Minas Conference" FontSize="Large" XAlign="Center" />
-        <Image Source="https://www.agileminas.com.br/2018/images/featured-speaker-two2.jpg" WidthRequest="250" HeightRequest="250" />
-        <Label Text="O Agile Minas Conference promoverá o networking entre os participantes e os conceitos sobre agilidade no desenvolvimento de projetos, entregando um conteúdo de peso com opções que atendam a um público variado, conectando os participantes a pessoas que passam pelo mesmo desafio e que tiveram diferentes aprendizados e fortalecendo a comunidade local. O evento é destinado a todos aqueles que já trabalham com métodos ágeis ou desejam começar a mergulhar neste universo, quer sejam de áreas técnicas, estratégicas ou de gestão e em todos os níveis de experiência em agilidade (iniciantes, praticantes ou experientes)." FontSize="Small" XAlign="Center"/>
+        <Label Text="{Binding Name}" FontSize="Large" XAlign="Center" />
+        <Image Source="{Binding ImageSource}" WidthRequest="250" HeightRequest="250" />
+        <Label Text="{Binding Description}" FontSize="Small" XAlign="Center"/>
     </StackLayout>
 </ContentPage>

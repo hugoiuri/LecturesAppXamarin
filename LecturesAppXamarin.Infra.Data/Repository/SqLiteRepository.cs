@@ -38,5 +38,10 @@ namespace LecturesAppXamarin.Infra.Data.Repository
         {
             await DatabaseContext.Database.UpdateAsync(tEntity);
         }
+
+        public async Task Clear()
+        {
+            await DatabaseContext.Database.DeleteAllAsync<TEntity>();
+        }
     }
 }

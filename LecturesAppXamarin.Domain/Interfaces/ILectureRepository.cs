@@ -8,6 +8,5 @@ namespace LecturesAppXamarin.Domain.Interfaces
 {
     public interface ILectureRepository : IRepository<Lecture>
     {
-        Task Clear();
     }
 }

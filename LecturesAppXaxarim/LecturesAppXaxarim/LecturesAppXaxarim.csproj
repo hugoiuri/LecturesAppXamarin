@@ -16,7 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\LecturesAppXamarin.Domain\LecturesAppXamarin.Domain.csproj" />
     <ProjectReference Include="..\..\LecturesAppXamarin.Infra.Data\LecturesAppXamarin.Infra.Data.csproj" />
   </ItemGroup>
 

@@ -1,4 +1,5 @@
-﻿using LecturesAppXamarin.Domain.Interfaces;
+﻿using LecturesAppXamarin.Domain.Events;
+using LecturesAppXamarin.Domain.Interfaces;
 using LecturesAppXamarin.Domain.Lectures;
 using SQLite;
 using System;
@@ -30,6 +31,7 @@ namespace LecturesAppXamarin.Infra.Data.Repository
             Conn = new SQLiteAsyncConnection(dbPath);
 
             Conn.CreateTableAsync<Lecture>().Wait();
+            Conn.CreateTableAsync<Event>().Wait();
         }
     }
 }

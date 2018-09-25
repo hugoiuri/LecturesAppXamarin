@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using CommonServiceLocator;
+using LecturesAppXaxarim.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +11,8 @@ namespace LecturesAppXaxarim.Views
 		public EventPage ()
 		{
 			InitializeComponent ();
-		}
+            var viewModel = ServiceLocator.Current.GetInstance<EventPageViewModel>();
+            BindingContext = viewModel;
+        }
 	}
 }

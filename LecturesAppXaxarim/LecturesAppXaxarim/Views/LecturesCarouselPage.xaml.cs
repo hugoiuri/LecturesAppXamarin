@@ -15,12 +15,10 @@ namespace LecturesAppXaxarim.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LecturesCarouselPage : CarouselPage
     {
-        private LecturesCarouselPageViewModel viewModel;
-
         public LecturesCarouselPage()
         {
             InitializeComponent();
-            viewModel = ServiceLocator.Current.GetInstance<LecturesCarouselPageViewModel>();
+            var viewModel = ServiceLocator.Current.GetInstance<LecturesCarouselPageViewModel>();
             BindingContext = viewModel;
             ItemsSource = viewModel.Lectures;
         }
